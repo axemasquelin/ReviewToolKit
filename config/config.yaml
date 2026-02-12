@@ -1,0 +1,37 @@
+project:
+  name: lung_cancer_review
+  version: 1.0
+
+input_files:
+  - path: data/pubmed.csv
+  - path: data/scopus.csv
+  - path: data/wos.csv
+
+column_mapping:
+  title: Title
+  article title: Title
+  keywords: Keywords
+  author keywords: Keywords
+  abstract: Abstract
+  authors: Authors
+  pub year: Publication Year
+  year: Publication Year
+  source title: Journal
+
+steps:
+  cleaning:
+    enabled: true
+
+  aggregation:
+    enabled: false
+    group_by: ["Publication Year"]
+    metrics:
+      count_titles: "Title"
+
+  deduplication:
+    enabled: true
+    fuzzy_threshold: 92
+
+  export:
+    enabled: true
+    output_path: outputs/master_review.csv
