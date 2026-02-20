@@ -1,6 +1,5 @@
 #!/usr/bin/env python3
 """
-=============================================================================
 Project:     ReviewToolKit
 File:        csv_sink.py
 Authors:     Axel Masquelin, Kalysta Makimoto, Raul San Jose Estepar
@@ -9,7 +8,6 @@ Modified:    2026-02-12
 Version:     0.1
 ---------
 # NOTE: Need to build function registry
-=============================================================================
 """
 # ------------ Libraries & Modules ------------ #
 import logging
